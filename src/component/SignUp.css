@@ -1,0 +1,161 @@
+
+.signup_container{
+    background-attachment: fixed;
+    color: #eee;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+     /*perspective: 1000px;
+    perspective-origin: 50% 50%;
+    animation: animation 250s linear infinite;*/
+}
+ 
+.signup_container::before{
+    background-color: #ff9d00;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg stroke='%23000' stroke-width='66.7' stroke-opacity='0.05' %3E%3Ccircle fill='%23ff9d00' cx='0' cy='0' r='1800'/%3E%3Ccircle fill='%23fb8d17' cx='0' cy='0' r='1700'/%3E%3Ccircle fill='%23f47d24' cx='0' cy='0' r='1600'/%3E%3Ccircle fill='%23ed6e2d' cx='0' cy='0' r='1500'/%3E%3Ccircle fill='%23e35f34' cx='0' cy='0' r='1400'/%3E%3Ccircle fill='%23d85239' cx='0' cy='0' r='1300'/%3E%3Ccircle fill='%23cc453e' cx='0' cy='0' r='1200'/%3E%3Ccircle fill='%23be3941' cx='0' cy='0' r='1100'/%3E%3Ccircle fill='%23b02f43' cx='0' cy='0' r='1000'/%3E%3Ccircle fill='%23a02644' cx='0' cy='0' r='900'/%3E%3Ccircle fill='%23901e44' cx='0' cy='0' r='800'/%3E%3Ccircle fill='%23801843' cx='0' cy='0' r='700'/%3E%3Ccircle fill='%236f1341' cx='0' cy='0' r='600'/%3E%3Ccircle fill='%235e0f3d' cx='0' cy='0' r='500'/%3E%3Ccircle fill='%234e0c38' cx='0' cy='0' r='400'/%3E%3Ccircle fill='%233e0933' cx='0' cy='0' r='300'/%3E%3Ccircle fill='%232e062c' cx='0' cy='0' r='200'/%3E%3Ccircle fill='%23210024' cx='0' cy='0' r='100'/%3E%3C/g%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity:1;
+     
+}
+
+
+@keyframes animation {
+    100%{
+     background-position:0px 3000px;
+   }
+}
+
+.text-center{
+    margin-bottom: 15px;
+    text-align: center;
+    color: rgb(255, 242, 234);
+}
+
+.login-button{
+    margin-top:10px;
+    padding: 3px;
+    cursor:pointer;    
+}
+
+.forgot-pass {
+    color:yellow;
+    text-decoration: none !important;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.loading-anim,.text-center, form, h2,.signup-innerbound{
+    position: relative;
+}
+
+
+.needacc{
+    color: rgb(255, 255, 255);
+    font-size: 0.8rem;
+}
+
+.signup-link{
+    color :rgb(255, 255, 255);
+    font-size: 0.9rem;
+    border: 1px solid white;
+    padding: 3px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.branding {
+    font-size: 1rem;
+    text-align: center;
+    padding-top: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.loading-anim{
+ text-align: center;
+}
+
+.forgot-pass{
+    margin-top:30px;
+}
+
+.logging-in{
+  margin-left: auto;
+  color: rgb(255, 255, 255);
+  margin-bottom: 10px;
+}
+
+.branding p{
+    font-style: italic;
+  
+}
+
+#login-label{
+    font-size: 0.5rem;
+    color: white!important;
+}
+
+#signup-label{
+    font-size: 0.6rem;
+    color: white!important;
+}
+
+
+input{
+    outline: none;
+    caret-color: rgb(145, 107, 36);
+    padding: 2px;
+
+}
+
+.button{
+    outline: none;
+    text-decoration: none;
+    border:none;
+}
+
+
+.container{
+    background: inherit;
+    position: relative;
+    margin-top: 70px;
+    font-size: 15px;
+    max-width: 165px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 7px;
+    border: 1px solid rgb(219, 219, 219);
+    z-index: 1;
+    
+    overflow: hidden;
+}
+
+.container::before{
+    background: inherit;
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 7px;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.2);
+    filter: blur(10px);
+    z-index: -1;
+    margin: -20px;
+    
+}
+
+
+
+.bottom{
+    margin-top: 60px;
+    font-size: 0.8rem;
+}
