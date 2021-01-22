@@ -1,0 +1,15 @@
+.update-item-form{
+    background-color: rgb(49, 97, 47);
+    padding: 15px;
+width :170px;
+font-size: 0.8rem;
+color: white;
+border-radius: 5px;
+    
+}
+
+.update-item-form label{
+    color: white;
+
+    margin-top: 10px;
+} 

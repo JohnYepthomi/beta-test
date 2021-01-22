@@ -62,9 +62,9 @@ const ItemList = ({ editItem }) => {
       {loading ? (
         <FadeIn delay={0}>
           <div class="loading-anim">
-            <Lottie options={defaultOptions} height={30} width={30} />
-            <p class="logging-in">
-              <small>Loggin you in</small>
+            <Lottie options={defaultOptions} height={50} width={50} />
+            <p class="loading-products">
+              <small>Loading Products</small>
             </p>
           </div>
         </FadeIn>
@@ -87,7 +87,7 @@ const ItemList = ({ editItem }) => {
                   <td>{item.name}</td>
                   <td>{item.price}</td>
                   <td>{item.salePrice}</td>
-                  <td>{item.category}</td>
+                  <td>{item.category_name}</td>
                   <td>{item.color}</td>
                   <td>
                     <button onClick={() => editItem(item)}>

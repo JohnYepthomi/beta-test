@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import "./UpdateItem.css";
 
 const UpdateItem = ({ setEditing, currentItem, updateItem }) => {
   const [item, setItem] = useState(currentItem);
@@ -27,25 +27,35 @@ const UpdateItem = ({ setEditing, currentItem, updateItem }) => {
       <h2> Update Item</h2>
       <form className="update-item-form" onSubmit={onSubmit}>
         <label htmlFor="Update Item">Update Item: </label>
+        <br />
+        <label>Name</label>
         <input type="text" name="name" value={item.name} onChange={onChange} />
+        <br />
+        <label>Price</label>
         <input
           type="text"
           name="price"
           value={item.price}
           onChange={onChange}
         />
+        <br />
+        <label>Sale Price</label>
         <input
           type="text"
           name="salePrice"
           value={item.salePrice}
           onChange={onChange}
         />
+        <br />
+        <label>Color</label>
         <input
           type="text"
           name="color"
           value={item.color}
           onChange={onChange}
         />
+        <br />
+        <label>Category</label>
         <input
           type="text"
           name="category"

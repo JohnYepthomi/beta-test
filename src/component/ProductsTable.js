@@ -20,7 +20,7 @@ const ProductsTable = (params) => {
       price: item.price,
       salePrice: item.salePrice,
       color: item.color,
-      category: item.category,
+      category: item.category_name,
     });
   };
 
