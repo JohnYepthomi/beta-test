@@ -12,7 +12,6 @@ function Dashboard() {
     <>
       <Appheader />
       <div className="main_window">
-        <Sidebar />
         <div className="body_content">
           <div className="active_menu_container">
             <svg
@@ -32,7 +31,7 @@ function Dashboard() {
             <p className="active_menu_display"> Dashboard</p>
           </div>
           <div className="top_cards_container">
-            <div className="card sales_card">
+            <div className="animate__animated animate__fadeInUp animate__faster card sales_card">
               <div className="innercard_container">
                 <img className="circle-svg" src={circlesvg} />
                 <p className="weekly_sales">Weekly sales</p>
@@ -41,7 +40,7 @@ function Dashboard() {
                 <p></p>
               </div>
             </div>
-            <div className="card returns_card">
+            <div className="animate__animated animate__fadeInUp animate__faster card returns_card">
               <div className="innercard_container">
                 <img className="circle-svg" src={circlesvg} />
                 <p className="weekly_sales">Products Sold</p>
@@ -50,7 +49,7 @@ function Dashboard() {
                 <p></p>
               </div>
             </div>
-            <div className="card revenue_card">
+            <div className="animate__animated animate__fadeInUp animate__faster card revenue_card">
               <div className="innercard_container">
                 <img className="circle-svg" src={circlesvg} />
                 <p className="weekly_sales">Products Returned</p>

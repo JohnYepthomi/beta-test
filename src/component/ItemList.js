@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import firebase from "firebase/app";
 import FadeIn from "react-fade-in";
 import Lottie from "react-lottie";
-import * as loadingjson from "../resources/loading.json";
-
+import * as loadingjson from "../resources/load-file.json";
+import imgy from "../resources/ipad.jpg";
 const ItemList = ({ editItem }) => {
   const [loading, setLoading] = useState(true);
   const [items, setItems] = useState([]);
@@ -62,7 +62,7 @@ const ItemList = ({ editItem }) => {
       {loading ? (
         <FadeIn delay={100}>
           <div class="loading-anim">
-            <Lottie options={defaultOptions} height={50} width={50} />
+            <Lottie options={defaultOptions} height={100} width={100} />
             <div class="loading-products">Loading Products</div>
           </div>
         </FadeIn>
@@ -73,9 +73,12 @@ const ItemList = ({ editItem }) => {
             {listItem.map((item, i) => {
               return (
                 <tr id={item.id} key={item.id} className="item">
-                  <div className="name-flex">
-                    <td className="list-name">{item.name}</td>
-                    <td className="list-price">₹{item.price}</td>
+                  <div className="image-flex">
+                    <img width="50px" HEIGHT="50PX" src={imgy} />
+                    <div className="name-flex">
+                      <td className="list-name">{item.name}</td>
+                      <div className="list-price">₹{item.price}</div>
+                    </div>
                   </div>
                   <td className="list-sale">{item.salePrice}</td>
                   <td className="tags">{item.category_name}</td>
