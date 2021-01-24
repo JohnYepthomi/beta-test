@@ -1,10 +1,16 @@
 .update-item-form{
+    position: absolute;
     background-color: rgb(49, 97, 47);
     padding: 15px;
 width :170px;
 font-size: 0.8rem;
 color: white;
 border-radius: 5px;
+top:0;
+left: 0;
+right: 0;
+bottom: 0;
+height: 35vh;
     
 }
 

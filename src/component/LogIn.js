@@ -80,7 +80,7 @@ export default function Login() {
           )}
 
           {loading && (
-            <FadeIn delay={0}>
+            <FadeIn delay={1}>
               <div class="loading-anim">
                 <Lottie options={defaultOptions} height={30} width={30} />
                 <p class="logging-in">

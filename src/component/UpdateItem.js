@@ -24,7 +24,6 @@ const UpdateItem = ({ setEditing, currentItem, updateItem }) => {
 
   return (
     <>
-      <h2> Update Item</h2>
       <form className="update-item-form" onSubmit={onSubmit}>
         <label htmlFor="Update Item">Update Item: </label>
         <br />

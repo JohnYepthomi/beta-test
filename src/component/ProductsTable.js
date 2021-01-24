@@ -56,8 +56,8 @@ const ProductsTable = (params) => {
           <button className="filter-button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
+              width="15"
+              height="15"
               fill="white"
               className="filter bi bi-filter-circle-fill"
               viewBox="0 0 16 16"

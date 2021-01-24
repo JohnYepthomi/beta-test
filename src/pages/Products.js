@@ -16,7 +16,6 @@ const Products = () => {
     <>
       <Appheader />
       <div className="main_window">
-        <Sidebar />
         <div className="products-container">
           <button onClick={handleClick} className="add_product_btn">
             <svg

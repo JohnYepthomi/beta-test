@@ -73,82 +73,73 @@ const VendorProductUploadForm = ({ setShowFormModal }) => {
     <div onClick={handleClick} className="backdrop">
       <div className="form">
         <form ref={formRef} className="vendor_form" onSubmit={addProduct}>
-          <div className="form_title">
-            <svg
-              width="1em"
-              height="1em"
-              style={{ marginRight: "5px" }}
-              viewBox="0 0 16 16"
-              className="bi bi-plus-circle-fill"
-              fill="green"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"
-              />
-            </svg>
-            ADD PRODUCT
-          </div>
+          <div className="form_title">ADD PRODUCT</div>
           {isUploaded && (
             <div className="upload_success">Uploaded Sucessfully</div>
           )}
-          <div className="label_container">
-            <label id="upload-label">Name</label>{" "}
-            <input required onChange={(e) => addProductName(e)} type="text" />
-          </div>
+          <div className="padding-container">
+            <img src="" alt="product-image" />
+            <div className="label_container">
+              <label id="upload-label">Name</label>{" "}
+              <input required onChange={(e) => addProductName(e)} type="text" />
+            </div>
 
-          <div className="label_container_price">
-            <label id="upload-label" style={{ marginRight: "5px" }}>
-              Price (₹)
-            </label>{" "}
-            <input
-              required
-              onChange={(e) => setPrice(e.target.value)}
-              style={{ width: "50px", marginRight: "5px" }}
-              type="text"
-            />
-            <label id="upload-label" style={{ marginRight: "5px" }}>
-              Sale Price (₹)
-            </label>{" "}
-            <input
-              required
-              onChange={(e) => setSalePrice(e.target.value)}
-              style={{ width: "50px" }}
-              type="text"
-            />
-          </div>
+            <div className="label_container_price">
+              <label id="upload-label" style={{ marginRight: "5px" }}>
+                Price (₹)
+              </label>{" "}
+              <input
+                required
+                onChange={(e) => setPrice(e.target.value)}
+                style={{ width: "50px", marginRight: "5px" }}
+                type="text"
+              />
+              <label id="upload-label" style={{ marginRight: "5px" }}>
+                Sale Price (₹)
+              </label>{" "}
+              <input
+                required
+                onChange={(e) => setSalePrice(e.target.value)}
+                style={{ width: "50px" }}
+                type="text"
+              />
+            </div>
+            <div className="label-container">
+              <div className="label_container">
+                <label id="upload-label">Category</label>{" "}
+                <select
+                  onChange={(e) => setCategory(e.target.value)}
+                  className="select_category"
+                >
+                  <option value="food">Food</option>
+                  <option value="stationery">Stationery</option>
+                  <option value="electronics">Electonics</option>
+                  <option value="sports">Sports</option>
+                </select>
+              </div>
 
-          <div className="label_container">
-            <label id="upload-label">Category</label>{" "}
-            <select
-              onChange={(e) => setCategory(e.target.value)}
-              className="select_category"
-            >
-              <option value="food">Food</option>
-              <option value="stationery">Stationery</option>
-              <option value="electronics">Electonics</option>
-              <option value="sports">Sports</option>
-            </select>
-          </div>
-
-          <div className="label_container">
-            <label id="upload-label">Sub Category</label>{" "}
-            <select
-              onChange={(e) => setSubCategory(e.target.value)}
-              className="select_category"
-            >
-              <option value="mobile">Mobile</option>
-              <option value="mobile accessories">Mobile Accessories</option>
-              <option value="hdtv">HD TVs</option>
-              <option value="sports">Sports</option>
-            </select>
-          </div>
+              <div className="label_container">
+                <label id="upload-label">Sub Category</label>{" "}
+                <select
+                  onChange={(e) => setSubCategory(e.target.value)}
+                  className="select_category"
+                >
+                  <option value="mobile">Mobile</option>
+                  <option value="mobile accessories">Mobile Accessories</option>
+                  <option value="hdtv">HD TVs</option>
+                  <option value="sports">Sports</option>
+                </select>
+              </div>
+            </div>
+         
 
           <div className="product_variants">
             <div className="label_container">
               <label id="upload-label">Weight</label>{" "}
-              <input onChange={(e) => setWeight(e.target.value)} type="text" />
+              <input
+                onChange={(e) => setWeight(e.target.value)}
+                type="number"
+              />
             </div>
 
             <div className="label_container">
@@ -173,7 +164,7 @@ const VendorProductUploadForm = ({ setShowFormModal }) => {
 
           <div className="label_container">
             <label id="upload-label">Detailed Description</label>{" "}
-            <input
+            <textarea
               required
               onChange={(e) => setLongDesc(e.target.value)}
               type="text"
@@ -191,8 +182,9 @@ const VendorProductUploadForm = ({ setShowFormModal }) => {
           </div>
 
           <button disabled={isUploaded} type="submit">
-            Submit
+              Submit
           </button>
+          </div>
         </form>
       </div>
     </div>
