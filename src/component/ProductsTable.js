@@ -8,7 +8,6 @@ const ProductsTable = (params) => {
   const initialItemState = [
     { id: null, name: "", price: "", category: "", salePrice: "", color: "" },
   ];
-
   const [currentItem, setCurrentItem] = useState(initialItemState);
   const [editing, setEditing] = useState(false);
 
@@ -56,9 +55,9 @@ const ProductsTable = (params) => {
           <button className="filter-button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="15"
-              height="15"
-              fill="white"
+              width="18"
+              height="18"
+              fill="gray"
               className="filter bi bi-filter-circle-fill"
               viewBox="0 0 16 16"
             >

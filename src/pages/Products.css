@@ -7,17 +7,18 @@
   padding: 5px;
   width: 115px;
   justify-content: space-around;
-  background-color: rgb(92, 121, 94);
-  color: white;
+  background-color: rgb(252, 252, 252);
+  color: rgb(82, 82, 82);
   border: none;
   outline: none;
   border-radius: 5px;
   cursor: pointer;
   margin-left: auto;
   margin-top: 20px;
+  margin-right: 10px;
 }
 
 .tags{
- color: violet;
+  color: violet;
 }
 

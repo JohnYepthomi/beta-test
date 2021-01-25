@@ -60,7 +60,7 @@ const ItemList = ({ editItem }) => {
   return (
     <>
       {loading ? (
-        <FadeIn delay={100}>
+        <FadeIn >
           <div class="loading-anim">
             <Lottie options={defaultOptions} height={100} width={100} />
             <div class="loading-products">Loading Products</div>

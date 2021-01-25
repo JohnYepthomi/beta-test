@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import firebase from "firebase/app";
+import nescafe from "../resources/nescafe.jpg";
 
 const VendorProductUploadForm = ({ setShowFormModal }) => {
   //Product Attributes
@@ -71,121 +72,76 @@ const VendorProductUploadForm = ({ setShowFormModal }) => {
 
   return (
     <div onClick={handleClick} className="backdrop">
-      <div className="form">
-        <form ref={formRef} className="vendor_form" onSubmit={addProduct}>
-          <div className="form_title">ADD PRODUCT</div>
-          {isUploaded && (
-            <div className="upload_success">Uploaded Sucessfully</div>
-          )}
-          <div className="padding-container">
-            <img src="" alt="product-image" />
-            <div className="label_container">
-              <label id="upload-label">Name</label>{" "}
-              <input required onChange={(e) => addProductName(e)} type="text" />
-            </div>
-
-            <div className="label_container_price">
-              <label id="upload-label" style={{ marginRight: "5px" }}>
-                Price (₹)
-              </label>{" "}
-              <input
-                required
-                onChange={(e) => setPrice(e.target.value)}
-                style={{ width: "50px", marginRight: "5px" }}
-                type="text"
-              />
-              <label id="upload-label" style={{ marginRight: "5px" }}>
-                Sale Price (₹)
-              </label>{" "}
-              <input
-                required
-                onChange={(e) => setSalePrice(e.target.value)}
-                style={{ width: "50px" }}
-                type="text"
-              />
-            </div>
-            <div className="label-container">
-              <div className="label_container">
-                <label id="upload-label">Category</label>{" "}
-                <select
-                  onChange={(e) => setCategory(e.target.value)}
-                  className="select_category"
-                >
-                  <option value="food">Food</option>
-                  <option value="stationery">Stationery</option>
-                  <option value="electronics">Electonics</option>
-                  <option value="sports">Sports</option>
-                </select>
-              </div>
-
-              <div className="label_container">
-                <label id="upload-label">Sub Category</label>{" "}
-                <select
-                  onChange={(e) => setSubCategory(e.target.value)}
-                  className="select_category"
-                >
-                  <option value="mobile">Mobile</option>
-                  <option value="mobile accessories">Mobile Accessories</option>
-                  <option value="hdtv">HD TVs</option>
-                  <option value="sports">Sports</option>
-                </select>
-              </div>
-            </div>
-         
-
-          <div className="product_variants">
-            <div className="label_container">
-              <label id="upload-label">Weight</label>{" "}
-              <input
-                onChange={(e) => setWeight(e.target.value)}
-                type="number"
-              />
-            </div>
-
-            <div className="label_container">
-              <label id="upload-label">Size</label>{" "}
-              <input onChange={(e) => setSize(e.target.value)} type="text" />
-            </div>
-
-            <div className="label_container">
-              <label id="upload-label">Color</label>{" "}
-              <input onChange={(e) => setColor(e.target.value)} type="text" />
+      <div className="p-container">
+        <div className="p-title">Add Product</div>
+        <div className="r-flex">
+          <img width="35px" src={nescafe} />
+          <div className="p-card">
+            <div className="p-label">Name</div>
+            <div>
+              <input placeholder="Enter product name" />
             </div>
           </div>
-
-          <div className="label_container">
-            <label id="upload-label">Short Description</label>{" "}
-            <input
-              required
-              onChange={(e) => setShortDesc(e.target.value)}
-              type="text"
-            />
+        </div>
+        <div className="r-flex">
+          <div className="p-card">
+            <div className="p-label">Price</div>
+            <div>
+              <input type="number" placeholder="Enter price" />
+            </div>
           </div>
-
-          <div className="label_container">
-            <label id="upload-label">Detailed Description</label>{" "}
-            <textarea
-              required
-              onChange={(e) => setLongDesc(e.target.value)}
-              type="text"
-            />
+          <div className="p-card">
+            <div class="p-label">Sale Price</div>
+            <div>
+              <input type="number" placeholder="Enter sale price" />
+            </div>
           </div>
-
-          <div className="label_container">
-            <label id="upload-label">Upload Main Image</label>{" "}
-            <input type="file" />
+        </div>
+        <div className="r-flex">
+          <div className="p-card">
+            <div className="p-label">Category</div>
+            <div>
+              <select>
+                <option value="Food">Food</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Medicine">Medicine</option>
+                <option value="Hardware">Hardware</option>
+              </select>
+            </div>
           </div>
-
-          <div className="label_container">
-            <label id="upload-label">Upload additional image</label>{" "}
-            <input type="file" />
+          <div className="p-card">
+            <div class="p-label">Sub Category</div>
+            <div>
+              <select>
+                <option value="baby-food">Baby foods</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="snacks">Snacks</option>
+                <option value="baked-goods">baked goods</option>
+              </select>
+            </div>
           </div>
+        </div>
 
-          <button disabled={isUploaded} type="submit">
-              Submit
-          </button>
+        <div className="p-card">
+          <div className="p-label">Details</div>
+          <div>
+            <input placeholder="Enter product details" />
           </div>
-        </form>
+        </div>
+
+        <div className="p-card">
+          <div className="p-label">Name</div>
+          <div>
+            <input placeholder="Enter product name" />
+          </div>
+        </div>
+
+        <div className="p-card">
+          <div className="p-label">Name</div>
+          <div>
+            <input placeholder="Enter product name" />
+          </div>
+        </div>
       </div>
     </div>
   );
